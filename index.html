@@ -1,0 +1,140 @@
+<!DOCTYPE html> <html><head>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Workbench">
+        <title>What Chip Am I?</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: aqua;
+    text-align: center;
+    background-image: url("https://img.freepik.com/premium-vector/vector-seamless-pattern-question-marks-quiz-background_574806-1036.jpg");
+}
+
+img {
+    width: 400px;
+}
+
+h1 {
+    font-size: 45px;
+    color: black;
+    font-family: "Workbench";
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 45px;
+    color: black;
+    font-family: "Workbench";
+    font-weight: 800;
+
+}
+
+.tittle {
+    font-size: 50px;
+    font-weight: 800;
+    color: black;
+    font-family: "Workbench";
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 400px;
+}
+
+p:hover,
+h1:hover,
+a:hover,
+h4:hover {
+    background-color: White;
+}
+
+.title {
+    text-align: center;
+}
+
+.counter {
+    color: black;
+}
+
+.results {
+    margin: 10px;
+    padding: 10px;
+    border: 5px aqua;
+    display: none;
+    text-align: center;
+}
+
+button {
+
+    background-color: white;
+    color: Black;
+    font-family: "Workbench";
+
+}
+
+.result {
+    color: black;
+    font-family: "Workbench";
+}
+
+.counter {
+    font-family: "Workbench";
+    text-align: center;
+    color: black;
+    padding: 10px;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What Chip Am I?</h1>
+        </div>
+        <div class="questions">
+            <h4>How Old Are You?</h4>
+
+            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/TedC69Q1k.png?output-format=jpg" alt="Bowl of potato chips.">
+            <input class="age" placeholder="Enter a number">
+
+
+            <h4>Do You Perfer Spicy Or Sour?</h4>
+
+            <img src="https://media.proprofs.com/images/QM/user_images/2503852/New%20Project%20(69)(505).jpg" alt=" A variety of chips. ">
+
+            <input class="taste" placeholder="spicy or sour?">
+            <button class="button">Find Out!</button>
+
+
+
+
+        </div>
+        <div class="result">
+
+
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var sumbitButton = document.querySelector(".taste-button");
+var button = document.querySelector(".button");
+var ageNumber = document.querySelector("age");
+var result = document.querySelector(".result");
+var numberTwo = document.querySelector(".age"); //
+
+button.onclick = function () {
+  var taste = document.querySelector(".taste").value;
+  var number = document.querySelector(".age").value;
+
+  if (number < 50 && taste === "spicy") {
+    result.innerHTML = "<img src=https://m.media-amazon.com/images/I/719xxva4LqL._AC_UF894,1000_QL80_.jpg> <br><em>You are Takis!</em>";
+  } else if (number > 50 && taste === "spicy") {
+    result.innerHTML = "<img src=https://target.scene7.com/is/image/Target/GUEST_9890f880-20fc-4f94-b325-c1c6875327ad?wid=488&hei=488&fmt=pjpeg> <br> <em> You are Hot cheetos!</em>";
+  } else if (number < 50 && taste === "sour") {
+    result.innerHTML = "<img src=https://target.scene7.com/is/image/Target/GUEST_f0a73791-4f47-4af4-9d80-3b5468d4eccb?wid=488&hei=488&fmt=pjpeg <br> <em> You are Lemon Lays! </em>";
+  } else if (number > 50 && taste === "sour") {
+    result.innerHTML = "<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQI28i2XIGxOBKvVcRt9QW_2ODeJQoSav31vQTK8no-pw9U2tGOCUOgnDLSo0LkCgMHk&usqp=CAU<br> <em> You are Lays! </em>";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInN1bWJpdEJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImJ1dHRvbiIsImFnZU51bWJlciIsInJlc3VsdCIsIm51bWJlclR3byIsIm9uY2xpY2siLCJ0YXN0ZSIsInZhbHVlIiwibnVtYmVyIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxZQUFZLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixlQUF2QixDQUFuQjtBQUNBLElBQUlDLE1BQU0sR0FBR0YsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWI7QUFDQSxJQUFJRSxTQUFTLEdBQUdILFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixLQUF2QixDQUFoQjtBQUNBLElBQUlHLE1BQU0sR0FBR0osUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWI7QUFDQSxJQUFJSSxTQUFTLEdBQUdMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixNQUF2QixDQUFoQixDLENBQ0E7O0FBQ0FDLE1BQU0sQ0FBQ0ksT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLEtBQUssR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLEVBQWlDTyxLQUE3QztBQUNBLE1BQUlDLE1BQU0sR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLE1BQXZCLEVBQStCTyxLQUE1Qzs7QUFDQSxNQUFJQyxNQUFNLEdBQUcsRUFBVCxJQUFlRixLQUFLLEtBQUssT0FBN0IsRUFBc0M7QUFDbENILElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUFtQixnSEFBbkI7QUFDSCxHQUZELE1BRU8sSUFBSUQsTUFBTSxHQUFHLEVBQVQsSUFBZUYsS0FBSyxLQUFLLE9BQTdCLEVBQXNDO0FBQ3pDSCxJQUFBQSxNQUFNLENBQUNNLFNBQVAsR0FBbUIsOEpBQW5CO0FBQ0gsR0FGTSxNQUVBLElBQUlELE1BQU0sR0FBRyxFQUFULElBQWVGLEtBQUssS0FBSyxNQUE3QixFQUFxQztBQUN4Q0gsSUFBQUEsTUFBTSxDQUFDTSxTQUFQLEdBQW1CLDZKQUFuQjtBQUNILEdBRk0sTUFFQSxJQUFJRCxNQUFNLEdBQUcsRUFBVCxJQUFlRixLQUFLLEtBQUssTUFBN0IsRUFBcUM7QUFDeENILElBQUFBLE1BQU0sQ0FBQ00sU0FBUCxHQUFtQiw0S0FBbkI7QUFDSDtBQUVKLENBYkQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgc3VtYml0QnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi50YXN0ZS1idXR0b25cIik7XG5sZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5idXR0b25cIik7XG5sZXQgYWdlTnVtYmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImFnZVwiKTtcbmxldCByZXN1bHQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcbmxldCBudW1iZXJUd28gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmFnZVwiKTtcbi8vXG5idXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICAgIGxldCB0YXN0ZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIudGFzdGVcIikudmFsdWU7XG4gICAgbGV0IG51bWJlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYWdlXCIpLnZhbHVlO1xuICAgIGlmIChudW1iZXIgPCA1MCAmJiB0YXN0ZSA9PT0gXCJzcGljeVwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIjxpbWcgc3JjPWh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9JLzcxOXh4dmE0THFMLl9BQ19VRjg5NCwxMDAwX1FMODBfLmpwZz4gPGJyPjxlbT5Zb3UgYXJlIFRha2lzITwvZW0+XCI7XG4gICAgfSBlbHNlIGlmIChudW1iZXIgPiA1MCAmJiB0YXN0ZSA9PT0gXCJzcGljeVwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIjxpbWcgc3JjPWh0dHBzOi8vdGFyZ2V0LnNjZW5lNy5jb20vaXMvaW1hZ2UvVGFyZ2V0L0dVRVNUXzk4OTBmODgwLTIwZmMtNGY5NC1iMzI1LWMxYzY4NzUzMjdhZD93aWQ9NDg4JmhlaT00ODgmZm10PXBqcGVnPiA8YnI+IDxlbT4gWW91IGFyZSBIb3QgY2hlZXRvcyE8L2VtPlwiO1xuICAgIH0gZWxzZSBpZiAobnVtYmVyIDwgNTAgJiYgdGFzdGUgPT09IFwic291clwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIjxpbWcgc3JjPWh0dHBzOi8vdGFyZ2V0LnNjZW5lNy5jb20vaXMvaW1hZ2UvVGFyZ2V0L0dVRVNUX2YwYTczNzkxLTRmNDctNGFmNC05ZDgwLTNiNTQ2OGQ0ZWNjYj93aWQ9NDg4JmhlaT00ODgmZm10PXBqcGVnIDxicj4gPGVtPiBZb3UgYXJlIExlbW9uIExheXMhIDwvZW0+XCI7XG4gICAgfSBlbHNlIGlmIChudW1iZXIgPiA1MCAmJiB0YXN0ZSA9PT0gXCJzb3VyXCIpIHtcbiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IFwiPGltZyBzcmM9aHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjUWhRSTI4aTJYSUd4T0JLdlZjUnQ5UVdfMk9EZUpRb1NhdjMxdlFUSzhuby1wdzlVMnRHT0NVT2duRExTbzBMa0NnTUhrJnVzcXA9Q0FVPGJyPiA8ZW0+IFlvdSBhcmUgTGF5cyEgPC9lbT5cIjtcbiAgICB9XG5cbn07Il19</script></body></html>
